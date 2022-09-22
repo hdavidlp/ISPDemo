@@ -4,17 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DemoLibrary
+namespace DemoLibrary.GeneralInterface
 {
-    public interface ILibraryItem
+    public interface IBorrowable
     {
-        string Author { get; set; }
         DateTime BorrowDate { get; set; }
         string Borrower { get; set; }
         int CheckOutDurationInDays { get; set; }
-        string LibraryId { get; set; }
-        int Pages { get; set; }
-        string Title { get; set; }
+
         void CheckIn();
         void CheckOut(string borrower);
         DateTime GetDueDate();
